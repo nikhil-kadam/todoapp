@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Todo">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Registration</title>
+
+    <!-- CSS Section -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="bower_components/toastr/toastr.min.css" rel="stylesheet">
+    <link href="bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet">
+    <link href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>  
+  </head>
+
+  <body ng-cloak>
+    
+    <!-- Content Section -->
+    <div class="container" ui-view>      
+    </div>
+
+    <!-- JavaScript asset files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Angularjs asset files -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- <script src="bower_components/angular-route/angular-route.min.js"></script> -->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.min.js"></script>
+    <script src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
+
+    <!-- Angular controllers -->
+    <script src="app/config/config.js"></script>
+    <script src="app/controllers/registration.js"></script>
+    <script src="app/controllers/login.js"></script>
+    <script src="app/controllers/edit.js"></script>
+    <script src="app/controllers/home.js"></script>
+    <script src="app/controllers/todo.js"></script>
+
+    <!-- Angular services -->
+    <script src="app/services/loginService.js"></script> 
+    <script src="app/services/registrationService.js"></script>
+    <script src="app/services/editService.js"></script>
+    <script src="app/services/todoService.js"></script>
+
+    <!-- Angular filters -->
+    <script src="app/filters/todoFilter.js"></script>
+
+    <!-- Angular directives -->
+    <script src="app/directives/fileUploadDirective.js"></script> 
+    <script src="app/directives/navbarDirective.js"></script>
+    <script src="app/directives/searchDirective.js"></script>
+  </body>
+
+</html>

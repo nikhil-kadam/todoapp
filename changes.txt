@@ -1,0 +1,12 @@
+Things used while developing,
+
+1. form validations
+2. toastr for error & success messages
+3. used localstorage & session storage for maintaining sessions
+4. passwords are stored in encrypted format using md5 algo
+5. ui-router is used for routing & user can not be able to use any page where login required
+6. datepicker used to select date
+7. used services to work with data
+8. cutom directives for fileupload , navbar, search bar
+9. custom filter used to filter todo list
+10. used watch in edit profile's controller 

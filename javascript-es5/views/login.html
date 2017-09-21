@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- CSS Section -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+      .div_padding{
+        padding-top: 50px;
+      }
+
+      form {
+          border: 3px solid #f1f1f1;
+      }
+
+      input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+      }
+
+      button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+      }
+
+      button:hover {
+          opacity: 0.8;
+      }
+
+      .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+      }
+
+      .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+      }
+
+      img.avatar {
+          width: 40%;
+          border-radius: 50%;
+      }
+
+      .container {
+          padding: 16px;
+      }
+
+      span.psw {
+          float: right;
+          padding-top: 16px;
+      }
+
+      .error{
+        color:red;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Content Section -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5" style="padding-top:10px;margin-left:30%;">
+          <center><h2>Login</h2></center>
+          <div class="alert alert-danger alert-dismissable" id="fail_message" style="display:none;">
+            <strong>Failed!</strong> Please check username/password/user type
+          </div>
+            <form action="" class="form-horizontal" novalidate>
+              <div class="container">
+                <div class="form-group">
+                  <label class="pull-left"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                  <label class="error" id="email-error" style="display:none"></label>
+                </div>
+
+                <div class="form-group">
+                  <label class="pull-left"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                  <label class="error" id="password-error" style="display:none"></label>
+                </div>
+
+                <div class="form-group">
+                  <label class="pull-left"><b>User Type</b></label>
+                  <select class="form-control" name="user_type" id="user_type">
+                    <option value="1">Student</option>
+                    <option value="2">Teacher</option>
+                  </select>
+                </div>
+
+                <button onclick="loginClass.validateForm(event)">Login</button>
+                
+                <a href="./registration.html">New user?</a><br>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript assets section -->
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript control files section -->
+    <script src="../controllers/main.js"></script>
+    <script src="../controllers/login.js"></script>
+
+  </body>
+
+</html>

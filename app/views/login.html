@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="col-lg-5" style="padding-top:10px;margin-left:30%;">
+    <center><h2>Login</h2></center>
+    <div class="alert alert-danger alert-dismissable" id="fail_message" style="display:none;">
+      <strong>Failed!</strong> Please check username/password/user type
+    </div>
+      <form action="" name="loginForm" class="form-horizontal" ng-submit="formSubmit($event)" novalidate>
+        <div class="container">
+          <div class="form-group">
+            <label class="pull-left"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" ng-pattern="/^[a-z0-9]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" id="email" ng-model="email" required>
+            <span style="color:red" ng-show="loginForm.email.$dirty && loginForm.email.$invalid || loginForm.$submitted && loginForm.email.$invalid">
+              <span ng-show="loginForm.email.$error.required"> Email is required.</span>
+              <span ng-show="loginForm.email.$invalid" ng-hide="loginForm.email.$error.required">Invalid email address.</span>
+            </span>  
+          </div>
+
+          <div class="form-group">
+            <label class="pull-left"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" ng-pattern="/^[A-Za-z0-9!@#$%^&*()_]{6,16}$/" ng-minlength="6" ng-maxlength="16" ng-model="password" id="password" required>
+
+            <span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid || loginForm.$submitted && loginForm.password.$invalid">
+                <span ng-show="loginForm.password.$error.required">Password is required.</span>
+                <span class="error" ng-show="loginForm.password.$invalid" ng-hide="loginForm.password.$error.required">
+                   password must have 6-16 characters  
+                </span>                             
+              </span>
+          </div>
+
+          <button >Login</button>
+          
+          <a href="#/registration">New user?</a><br>
+        </div>
+      </form>
+  </div>
+</div>
+   

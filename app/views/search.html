@@ -1,0 +1,27 @@
+<div class="col-md-2">
+  <datepicker date-format="yyyy-MM-dd" style="z-index:100000;">
+      <input type="text" placeholder="Enter todo date" name="todoDate" ng-model="startDate" id="last_name" required>
+
+      <!-- validation -->
+      <span class="error" ng-show="todoForm.todoDate.$dirty && todoForm.todoDate.$invalid || todoForm.$submitted && todoForm.todoDate.$invalid">
+        <span ng-show="todoForm.todoDate.$error.required">Todo date is required.</span>
+      </span>
+  </datepicker>  
+</div>
+<div class="col-md-2 pull-left">
+   <datepicker date-format="yyyy-MM-dd">
+      <input type="text" placeholder="Enter todo date" name="todoDate" ng-model="endDate" id="last_name" required>
+
+      <!-- validation -->
+      <span class="error" ng-show="todoForm.todoDate.$dirty && todoForm.todoDate.$invalid || todoForm.$submitted && todoForm.todoDate.$invalid">
+        <span ng-show="todoForm.todoDate.$error.required">Todo date is required.</span>
+      </span>
+  </datepicker>
+</div> 
+<div class="col-md-2 pull-left" style="margin-top:10px;">
+    <select name="status" class="form-control" ng-model="status">
+      <option value="">Select Status</option>
+      <option value="0">Pending</option>
+      <option value="1">Done</option>
+    </select>
+</div>

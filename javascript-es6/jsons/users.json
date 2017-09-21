@@ -1,0 +1,30 @@
+[
+    {
+     "first_name": "Rohan",
+     "last_name": "kadam",
+     "email": "Rehan@gmail.com",
+     "password": "111111",
+     "userType": "1"
+    },
+    {
+      "first_name": "ganesh",
+      "last_name": "kanase",
+      "email": "ganesh@gmail.com",
+      "password": "111111",
+      "userType": "1"
+    },
+    {
+      "first_name": "sid",
+      "last_name": "kanase",
+      "email": "sid@gmail.com",
+      "password": "111111",
+      "userType": "1"
+    },
+    {
+      "first_name": "nikhil",
+      "last_name": "kanase",
+      "email": "nik@gmail.com",
+      "password": "111111",
+      "userType": "2"
+    },
+]
