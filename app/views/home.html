@@ -18,18 +18,30 @@
               <tr>
                 <th style="text-align:center;"><input type="checkbox" ng-model="isAll" ng-click="selectAllRows()"/></th>
                 <th style="text-align:center;">Sr. No.</th>
-                <th style="text-align:center;">Name</th>
-                <th style="text-align:center;">Is Reminder</th>
-                <th style="text-align:center;">Date</th>
-                <th style="text-align:center;">Reminder Date</th>
-                <th style="text-align:center;">Public</th>
-                <th style="text-align:center;">Status</th>
+                <th style="text-align:center;">Name 
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('name')" style="font-size:10px;"></i>
+                </th>
+                <th style="text-align:center;">Date
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('todoDate')" style="font-size:10px;"></i>
+                </th>
+                <th style="text-align:center;">Is Reminder
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('isReminder')" style="font-size:10px;"></i>
+                </th>                
+                <th style="text-align:center;">Reminder Date
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('reminderDate')" style="font-size:10px;"></i>
+                </th>
+                <th style="text-align:center;">Public
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('isPublic')" style="font-size:10px;"></i>
+                </th>
+                <th style="text-align:center;">Status
+                  <i class="fa fa-fw fa-sort" ng-click="sortBy('status')" style="font-size:10px;"></i>
+                </th>
                 <th style="text-align:center;">Image</th>
                 <th style="text-align:center;">Action</th>
               </tr>
             </thead>
             <tbody id="table_body">
-              <tr ng-repeat='list in list_items | myfilter: startDate: endDate | filter:{status:status}'>
+              <tr ng-repeat='list in list_items | myfilter: startDate: endDate | filter:{status:status} | orderBy:propertyName:reverse'>
                   <td><input type="checkbox" ng-model="tableSelection[$index]" /></td>
                   <td>{{$index + 1}}</td>
                   <td>{{list.name}}</td>
@@ -38,7 +50,7 @@
                   <td>{{list.reminderDate}}</td>
                   <td><span ng-if="list.isPublic == 1">Yes</span><span ng-if="list.isPublic == 0">No</span></td>
                   <td><span ng-if="list.status == 1">Yes</span><span ng-if="list.status == 0">No</span></td>
-                  <td><img ng-src="{{list.image}}" class="img-responsive" width="10%"/></td>
+                  <td width="10%"><img ng-src="{{list.image}}" class="img-responsive" width="50%"/></td>
                   <td width="14%">
                     <button class="btn btn-success btn-xs" data-title="Delete" data-toggle="modal" ng-click="editTodo(list.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
                     <button class="btn btn-success btn-xs" data-title="Delete" data-toggle="modal" ng-click="viewTodo(list.id)"><i class="fa fa-eye" aria-hidden="true"></i></button>

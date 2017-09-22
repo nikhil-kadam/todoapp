@@ -66,4 +66,13 @@ app.controller('homeController',function($scope,toastr,$location,editService,$se
 	$scope.viewTodo = function(todoID){
 		$location.path("/viewTodo/"+todoID);
 	};
+
+	// sorting for table
+	$scope.propertyName = 'age';
+	$scope.reverse = true;
+	
+	$scope.sortBy = function(propertyName) {
+	   $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+	   $scope.propertyName = propertyName;
+	};
 });
