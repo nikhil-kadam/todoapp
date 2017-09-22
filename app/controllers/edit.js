@@ -46,7 +46,7 @@ app.controller('editController',function($scope,toastr,$location,editService,$se
 			$scope.filepreview = userDetails.filepreview;
 		}
 	}; 
-
+ 
 	// load user details to inputs
 	$scope.fetchEditUserDetails();
 

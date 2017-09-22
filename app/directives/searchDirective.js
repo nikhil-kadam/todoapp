@@ -23,6 +23,11 @@ app.directive('searchDirective', function ($location) {
             $scope.editProfile = function() {
                 $location.path("/edit");
             };
+
+            // create todo
+            $scope.createTodo = function(){
+                $location.path("/todo");
+            };
         }
     };
 });

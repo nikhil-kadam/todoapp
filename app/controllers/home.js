@@ -9,13 +9,8 @@ app.controller('homeController',function($scope,toastr,$location,editService,$se
 	// diplay listing
 	$scope.fetchTodoList();	
 
-	// redirect to todo
-	$scope.createTodo = function(){
-		$location.path("/todo");
-	};
-
 	$scope.tableSelection = {};
-  	$scope.isAll = false;
+  $scope.isAll = false;
 	$scope.selectAllRows = function() { 
 	    //check if all selected or not
 	    if ($scope.isAll === false) { 
