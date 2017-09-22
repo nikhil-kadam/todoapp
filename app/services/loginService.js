@@ -17,27 +17,29 @@ app.factory('loginService',function($localStorage,md5,$sessionStorage){
 			var lastName;
 			var userID;
 
-			// check user details
-			userDetails.filter(function(data){
-				if(data.email == email && data.password == password){
-					isValidUser = 1;
+			if(typeof userDetails !== 'undefined'){
+				// check user details
+				userDetails.filter(function(data){
+					if(data.email == email && data.password == password){
+						isValidUser = 1;
 
-					// set user details
-					firstName = data.first_name;
-					lastName = data.Last_name;
-					userID = data.id;
-				}				
-			});
+						// set user details
+						firstName = data.first_name;
+						lastName = data.Last_name;
+						userID = data.id;
+					}				
+				});
 
-			// check if user is valid
-			if(isValidUser == 1){
-				// set user session details
-				$sessionStorage.email = email;
-				$sessionStorage.firstName = firstName;
-				$sessionStorage.lastName = lastName;
-				$sessionStorage.userID = userID;
+				// check if user is valid
+				if(isValidUser == 1){
+					// set user session details
+					$sessionStorage.email = email;
+					$sessionStorage.firstName = firstName;
+					$sessionStorage.lastName = lastName;
+					$sessionStorage.userID = userID;
 
-				return true;
+					return true;
+				}
 			}
 			return false;
 		},
