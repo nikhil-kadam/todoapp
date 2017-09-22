@@ -3,8 +3,8 @@ app.controller('todoController',function($scope,toastr,$location,todoService,$se
 
 	var todoID = $stateParams.id;
 
-	// set watch for variable
-	$scope.$watch('todoID', function() {
+	// load todo details
+	var init = function(){
 		var todoDetails = todoService.fetchTodoDetails(todoID);
 
 		if(typeof todoDetails !== 'undefined'){
@@ -19,7 +19,10 @@ app.controller('todoController',function($scope,toastr,$location,todoService,$se
 	        $scope.officeCategory = todoDetails.categories.office;
 	        $scope.trainingcategory = todoDetails.categories.training;
 	    }
-    }); 
+	};
+
+	// load init 
+	init();
 
 	// create todo
 	$scope.createTodo = function($event){
