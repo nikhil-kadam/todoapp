@@ -50,29 +50,38 @@
     <script src="bower_components/ngstorage/ngStorage.min.js"></script>
     <script src="bower_components/angular-md5/angular-md5.min.js"></script>
     <script src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
     
-    <!-- Angular controllers -->
-    <script src="app/config/config.js"></script>
-    <script src="app/controllers/registration.js"></script>
-    <script src="app/controllers/login.js"></script>
-    <script src="app/controllers/edit.js"></script>
-    <script src="app/controllers/home.js"></script>
-    <script src="app/controllers/todo.js"></script>
+    <!-- Angular Config -->
+    <script src="config/config.js"></script>
+    <script src="app/app.js"></script>
 
-    <!-- Angular services -->
-    <script src="app/services/loginService.js"></script> 
-    <script src="app/services/registrationService.js"></script>
-    <script src="app/services/editService.js"></script>
-    <script src="app/services/todoService.js"></script>
+    <!-- Registration Module -->
+      <script src="app/modules/registration/route.js"></script>
+      <script src="app/modules/registration/controllers/registration.js"></script> 
+      <script src="app/services/registration/registrationService.js"></script>  
+      
+    <!-- Login Module -->
+      <script src="app/modules/login/route.js"></script>
+      <script src="app/modules/login/controllers/login.js"></script> 
+      <script src="app/services/login/loginService.js"></script>
+      
+    <!-- Dashboard Module -->
+      <script src="app/modules/dashboard/route.js"></script>
+      <script src="app/modules/dashboard/controllers/home.js"></script> 
+      <script src="app/modules/dashboard/controllers/edit.js"></script> 
+      <script src="app/services/dashboard/editService.js"></script>  
 
-    <!-- Angular filters -->
-    <script src="app/filters/todoFilter.js"></script>
+    <!-- Todo Module -->
+      <script src="app/modules/todo/route.js"></script>
+      <script src="app/modules/todo/controllers/todo.js"></script>
+      <script src="app/services/todo/todoService.js"></script>
+      <script src="app/filters/todo/todoFilter.js"></script>
 
-    <!-- Angular directives -->
-    <script src="app/directives/fileUploadDirective.js"></script> 
-    <script src="app/directives/navbarDirective.js"></script>
-    <script src="app/directives/searchDirective.js"></script>
+     <!-- Directives -->
+     <script src="app/directives/navbar/navbarDirective.js"></script>
+     <script src="app/directives/search/searchDirective.js"></script>
+     <script src="app/directives/fileupload/fileUploadDirective.js"></script>
+
   </body>
 
 </html>
