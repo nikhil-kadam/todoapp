@@ -21,7 +21,7 @@ module.exports = {
     "./app/directives/fileupload/fileUploadDirective.js"
   ],
   output: {
-    filename: "bundle.js"
+    filename: "webpack/app.js"
   }, 
   watch: true
 }
