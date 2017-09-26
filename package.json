@@ -7,7 +7,10 @@
     "bootstrap": "^3.3.7",
     "gulp": "^3.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -30,7 +30,7 @@
         });
     })
     .run(function($state,$rootScope,loginService){
-        //alert(loginService.isLoggedIn());
+        // check login
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var authToken = loginService.isLoggedIn();
             if (!authToken && toState.name !== 'login' && toState.name !== 'registration') {
